@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */; };
-		DB1B393E1F77FE5800FBD410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393D1F77FE5800FBD410 /* ViewController.swift */; };
+		DB1B393E1F77FE5800FBD410 /* MadridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */; };
 		DB1B39411F77FE5800FBD410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1B393F1F77FE5800FBD410 /* Main.storyboard */; };
 		DB1B39441F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB1B39421F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld */; };
 		DB1B39461F77FE5800FBD410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1B39451F77FE5800FBD410 /* Assets.xcassets */; };
 		DB1B39491F77FE5800FBD410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1B39471F77FE5800FBD410 /* LaunchScreen.storyboard */; };
 		DB1B39541F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B39531F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift */; };
+		DB9A742A1F7805E500EE392B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A74291F7805E500EE392B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 /* Begin PBXFileReference section */
 		DB1B39381F77FE5800FBD410 /* MadridShopsAndActivities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShopsAndActivities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB1B393D1F77FE5800FBD410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridViewController.swift; sourceTree = "<group>"; };
 		DB1B39401F77FE5800FBD410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB1B39431F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MadridShopsAndActivities.xcdatamodel; sourceTree = "<group>"; };
 		DB1B39451F77FE5800FBD410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		DB1B394F1F77FE5800FBD410 /* MadridShopsAndActivitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadridShopsAndActivitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1B39531F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridShopsAndActivitiesTests.swift; sourceTree = "<group>"; };
 		DB1B39551F77FE5800FBD410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9A74291F7805E500EE392B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9A742A1F7805E500EE392B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 				DB1B393A1F77FE5800FBD410 /* MadridShopsAndActivities */,
 				DB1B39521F77FE5800FBD410 /* MadridShopsAndActivitiesTests */,
 				DB1B39391F77FE5800FBD410 /* Products */,
+				DB9A74281F7805E500EE392B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */,
-				DB1B393D1F77FE5800FBD410 /* ViewController.swift */,
+				DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */,
 				DB1B393F1F77FE5800FBD410 /* Main.storyboard */,
 				DB1B39451F77FE5800FBD410 /* Assets.xcassets */,
 				DB1B39471F77FE5800FBD410 /* LaunchScreen.storyboard */,
@@ -97,6 +101,14 @@
 				DB1B39551F77FE5800FBD410 /* Info.plist */,
 			);
 			path = MadridShopsAndActivitiesTests;
+			sourceTree = "<group>";
+		};
+		DB9A74281F7805E500EE392B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB9A74291F7805E500EE392B /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +162,11 @@
 					DB1B39371F77FE5800FBD410 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DB1B394E1F77FE5800FBD410 = {
 						CreatedOnToolsVersion = 9.0;
@@ -202,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1B393E1F77FE5800FBD410 /* ViewController.swift in Sources */,
+				DB1B393E1F77FE5800FBD410 /* MadridViewController.swift in Sources */,
 				DB1B39441F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld in Sources */,
 				DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */,
 			);
