@@ -15,6 +15,15 @@
 		DB1B39491F77FE5800FBD410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1B39471F77FE5800FBD410 /* LaunchScreen.storyboard */; };
 		DB1B39541F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B39531F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift */; };
 		DB9A742A1F7805E500EE392B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A74291F7805E500EE392B /* MapKit.framework */; };
+		DB9A74311F78097700EE392B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74301F78097700EE392B /* Activity.swift */; };
+		DB9A74331F78098600EE392B /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74321F78098600EE392B /* Activities.swift */; };
+		DB9A74361F781E8200EE392B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74351F781E8200EE392B /* JSONParser.swift */; };
+		DB9A74371F781F9600EE392B /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A742F1F78086F00EE392B /* Shops.swift */; };
+		DB9A74381F781FB500EE392B /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A742E1F78084A00EE392B /* Shop.swift */; };
+		DB9A743B1F78217300EE392B /* DownloadAllInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A743A1F78217300EE392B /* DownloadAllInteractor.swift */; };
+		DB9A743D1F7821D600EE392B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A743C1F7821D600EE392B /* Constants.swift */; };
+		DB9A743F1F78225100EE392B /* DownloadAllShopsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A743E1F78225000EE392B /* DownloadAllShopsInteractorImpl.swift */; };
+		DB9A74411F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74401F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +49,15 @@
 		DB1B39531F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridShopsAndActivitiesTests.swift; sourceTree = "<group>"; };
 		DB1B39551F77FE5800FBD410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9A74291F7805E500EE392B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DB9A742E1F78084A00EE392B /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		DB9A742F1F78086F00EE392B /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
+		DB9A74301F78097700EE392B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		DB9A74321F78098600EE392B /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		DB9A74351F781E8200EE392B /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		DB9A743A1F78217300EE392B /* DownloadAllInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllInteractor.swift; sourceTree = "<group>"; };
+		DB9A743C1F7821D600EE392B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB9A743E1F78225000EE392B /* DownloadAllShopsInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorImpl.swift; sourceTree = "<group>"; };
+		DB9A74401F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllActivitiesInteractorImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */,
-				DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */,
-				DB1B393F1F77FE5800FBD410 /* Main.storyboard */,
+				DB9A742D1F7807FC00EE392B /* Model */,
+				DB9A742C1F7807F700EE392B /* View */,
+				DB9A742B1F7807EC00EE392B /* Controller */,
 				DB1B39451F77FE5800FBD410 /* Assets.xcassets */,
-				DB1B39471F77FE5800FBD410 /* LaunchScreen.storyboard */,
 				DB1B394A1F77FE5800FBD410 /* Info.plist */,
-				DB1B39421F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld */,
+				DB9A743C1F7821D600EE392B /* Constants.swift */,
 			);
 			path = MadridShopsAndActivities;
 			sourceTree = "<group>";
@@ -109,6 +127,55 @@
 				DB9A74291F7805E500EE392B /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB9A742B1F7807EC00EE392B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB9A742C1F7807F700EE392B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB1B39471F77FE5800FBD410 /* LaunchScreen.storyboard */,
+				DB1B393F1F77FE5800FBD410 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB9A742D1F7807FC00EE392B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB9A74391F78215B00EE392B /* Interactors */,
+				DB9A74341F781E5C00EE392B /* Json Parser */,
+				DB9A74301F78097700EE392B /* Activity.swift */,
+				DB9A74321F78098600EE392B /* Activities.swift */,
+				DB9A742E1F78084A00EE392B /* Shop.swift */,
+				DB9A742F1F78086F00EE392B /* Shops.swift */,
+				DB1B39421F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB9A74341F781E5C00EE392B /* Json Parser */ = {
+			isa = PBXGroup;
+			children = (
+				DB9A74351F781E8200EE392B /* JSONParser.swift */,
+			);
+			path = "Json Parser";
+			sourceTree = "<group>";
+		};
+		DB9A74391F78215B00EE392B /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				DB9A743A1F78217300EE392B /* DownloadAllInteractor.swift */,
+				DB9A743E1F78225000EE392B /* DownloadAllShopsInteractorImpl.swift */,
+				DB9A74401F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +288,16 @@
 			files = (
 				DB1B393E1F77FE5800FBD410 /* MadridViewController.swift in Sources */,
 				DB1B39441F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld in Sources */,
+				DB9A74361F781E8200EE392B /* JSONParser.swift in Sources */,
+				DB9A74311F78097700EE392B /* Activity.swift in Sources */,
+				DB9A74371F781F9600EE392B /* Shops.swift in Sources */,
+				DB9A743F1F78225100EE392B /* DownloadAllShopsInteractorImpl.swift in Sources */,
+				DB9A743D1F7821D600EE392B /* Constants.swift in Sources */,
+				DB9A74331F78098600EE392B /* Activities.swift in Sources */,
+				DB9A743B1F78217300EE392B /* DownloadAllInteractor.swift in Sources */,
 				DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */,
+				DB9A74411F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift in Sources */,
+				DB9A74381F781FB500EE392B /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
