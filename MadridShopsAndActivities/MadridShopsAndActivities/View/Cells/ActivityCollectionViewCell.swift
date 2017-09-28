@@ -1,17 +1,17 @@
 //
-//  MadridCollectionViewCell.swift
+//  ActivitiesCollectionViewCell.swift
 //  MadridShopsAndActivities
 //
-//  Created by Tomás Ignacio Moyano on 9/24/17.
+//  Created by Tomás Ignacio Moyano on 9/26/17.
 //  Copyright © 2017 Tomás Ignacio Moyano. All rights reserved.
 //
 
 import UIKit
 
-class MadridCollectionViewCell: UICollectionViewCell {
-
-    static let identifier = "madridCell"
-        
+class ActivityCollectionViewCell: UICollectionViewCell {
+    
+    static let identifier = "activityCell"
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var logoImgView: UIImageView!
     
@@ -19,8 +19,7 @@ class MadridCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func updateInFo(model:ShopCD) {
+    func updateInFo(model:ActivityCD) {
         nameLabel.text = model.name
     }
-
 }

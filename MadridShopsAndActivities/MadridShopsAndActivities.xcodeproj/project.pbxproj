@@ -9,15 +9,30 @@
 /* Begin PBXBuildFile section */
 		DB16EFD41F7860170039ACFE /* MadridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD21F7860170039ACFE /* MadridCollectionViewCell.swift */; };
 		DB16EFD51F7860170039ACFE /* MadridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB16EFD31F7860170039ACFE /* MadridCollectionViewCell.xib */; };
-		DB16EFD71F7860AC0039ACFE /* MadridViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD61F7860AC0039ACFE /* MadridViewController+UICollectionView.swift */; };
+		DB16EFD71F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */; };
 		DB16EFDA1F7AC6730039ACFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD91F7AC6730039ACFE /* Reachability.swift */; };
 		DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */; };
-		DB1B393E1F77FE5800FBD410 /* MadridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */; };
+		DB1B393E1F77FE5800FBD410 /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393D1F77FE5800FBD410 /* ShopsViewController.swift */; };
 		DB1B39411F77FE5800FBD410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1B393F1F77FE5800FBD410 /* Main.storyboard */; };
 		DB1B39441F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB1B39421F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld */; };
 		DB1B39461F77FE5800FBD410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1B39451F77FE5800FBD410 /* Assets.xcassets */; };
 		DB1B39491F77FE5800FBD410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1B39471F77FE5800FBD410 /* LaunchScreen.storyboard */; };
 		DB1B39541F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B39531F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift */; };
+		DB2BA3E71F7DA7A900FF8701 /* MadridTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BA3E61F7DA7A900FF8701 /* MadridTabBarController.swift */; };
+		DB2BA3EE1F7DAC2D00FF8701 /* SetExecutedOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BA3EA1F7DAC2C00FF8701 /* SetExecutedOnceInteractorImpl.swift */; };
+		DB2BA3EF1F7DAC2D00FF8701 /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BA3EB1F7DAC2D00FF8701 /* SetExecutedOnceInteractor.swift */; };
+		DB2BA3F11F7DB13D00FF8701 /* CheckExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BA3F01F7DB13D00FF8701 /* CheckExecutedOnceInteractor.swift */; };
+		DB2BA3F31F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BA3F21F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift */; };
+		DB4641731F7ACEF2006D4B20 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641721F7ACEF2006D4B20 /* CoreDataStack.swift */; };
+		DB4641751F7ACF36006D4B20 /* HelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641741F7ACF36006D4B20 /* HelperClass.swift */; };
+		DB4641771F7AD610006D4B20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641761F7AD610006D4B20 /* DetailViewController.swift */; };
+		DB46417C1F7AE47F006D4B20 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46417B1F7AE47F006D4B20 /* Mapper.swift */; };
+		DB46417D1F7AE514006D4B20 /* SaveAllInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46417A1F7AE468006D4B20 /* SaveAllInteractorImplementation.swift */; };
+		DB46417E1F7AE517006D4B20 /* SaveAllInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641791F7AE468006D4B20 /* SaveAllInteractor.swift */; };
+		DB4641801F7AE8A6006D4B20 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46417F1F7AE8A6006D4B20 /* ActivitiesViewController.swift */; };
+		DB4641821F7AEBAC006D4B20 /* ActivitiesViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641811F7AEBAC006D4B20 /* ActivitiesViewController+UICollectionView.swift */; };
+		DB4641841F7AEC06006D4B20 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641831F7AEC06006D4B20 /* ActivityCollectionViewCell.swift */; };
+		DB4641861F7AEC4E006D4B20 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4641851F7AEC4E006D4B20 /* ActivityCell.xib */; };
 		DB9A742A1F7805E500EE392B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A74291F7805E500EE392B /* MapKit.framework */; };
 		DB9A74311F78097700EE392B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74301F78097700EE392B /* Activity.swift */; };
 		DB9A74331F78098600EE392B /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74321F78098600EE392B /* Activities.swift */; };
@@ -43,11 +58,11 @@
 /* Begin PBXFileReference section */
 		DB16EFD21F7860170039ACFE /* MadridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB16EFD31F7860170039ACFE /* MadridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MadridCollectionViewCell.xib; sourceTree = "<group>"; };
-		DB16EFD61F7860AC0039ACFE /* MadridViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MadridViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopsViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		DB16EFD91F7AC6730039ACFE /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB1B39381F77FE5800FBD410 /* MadridShopsAndActivities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShopsAndActivities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridViewController.swift; sourceTree = "<group>"; };
+		DB1B393D1F77FE5800FBD410 /* ShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
 		DB1B39401F77FE5800FBD410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB1B39431F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MadridShopsAndActivities.xcdatamodel; sourceTree = "<group>"; };
 		DB1B39451F77FE5800FBD410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +71,21 @@
 		DB1B394F1F77FE5800FBD410 /* MadridShopsAndActivitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadridShopsAndActivitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1B39531F77FE5800FBD410 /* MadridShopsAndActivitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridShopsAndActivitiesTests.swift; sourceTree = "<group>"; };
 		DB1B39551F77FE5800FBD410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB2BA3E61F7DA7A900FF8701 /* MadridTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridTabBarController.swift; sourceTree = "<group>"; };
+		DB2BA3EA1F7DAC2C00FF8701 /* SetExecutedOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractorImpl.swift; sourceTree = "<group>"; };
+		DB2BA3EB1F7DAC2D00FF8701 /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
+		DB2BA3F01F7DB13D00FF8701 /* CheckExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckExecutedOnceInteractor.swift; sourceTree = "<group>"; };
+		DB2BA3F21F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckExecutedOnceInteractorImpl.swift; sourceTree = "<group>"; };
+		DB4641721F7ACEF2006D4B20 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DB4641741F7ACF36006D4B20 /* HelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClass.swift; sourceTree = "<group>"; };
+		DB4641761F7AD610006D4B20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DB4641791F7AE468006D4B20 /* SaveAllInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllInteractor.swift; sourceTree = "<group>"; };
+		DB46417A1F7AE468006D4B20 /* SaveAllInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllInteractorImplementation.swift; sourceTree = "<group>"; };
+		DB46417B1F7AE47F006D4B20 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		DB46417F1F7AE8A6006D4B20 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		DB4641811F7AEBAC006D4B20 /* ActivitiesViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivitiesViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		DB4641831F7AEC06006D4B20 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB4641851F7AEC4E006D4B20 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		DB9A74291F7805E500EE392B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DB9A742E1F78084A00EE392B /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		DB9A742F1F78086F00EE392B /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
@@ -92,6 +122,8 @@
 			children = (
 				DB16EFD21F7860170039ACFE /* MadridCollectionViewCell.swift */,
 				DB16EFD31F7860170039ACFE /* MadridCollectionViewCell.xib */,
+				DB4641831F7AEC06006D4B20 /* ActivityCollectionViewCell.swift */,
+				DB4641851F7AEC4E006D4B20 /* ActivityCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -99,7 +131,10 @@
 		DB16EFD81F7AC65F0039ACFE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DB4641721F7ACEF2006D4B20 /* CoreDataStack.swift */,
 				DB16EFD91F7AC6730039ACFE /* Reachability.swift */,
+				DB9A743C1F7821D600EE392B /* Constants.swift */,
+				DB4641741F7ACF36006D4B20 /* HelperClass.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -126,14 +161,13 @@
 		DB1B393A1F77FE5800FBD410 /* MadridShopsAndActivities */ = {
 			isa = PBXGroup;
 			children = (
-				DB16EFD81F7AC65F0039ACFE /* Helpers */,
 				DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */,
+				DB16EFD81F7AC65F0039ACFE /* Helpers */,
 				DB9A742D1F7807FC00EE392B /* Model */,
 				DB9A742C1F7807F700EE392B /* View */,
 				DB9A742B1F7807EC00EE392B /* Controller */,
 				DB1B39451F77FE5800FBD410 /* Assets.xcassets */,
 				DB1B394A1F77FE5800FBD410 /* Info.plist */,
-				DB9A743C1F7821D600EE392B /* Constants.swift */,
 			);
 			path = MadridShopsAndActivities;
 			sourceTree = "<group>";
@@ -147,6 +181,15 @@
 			path = MadridShopsAndActivitiesTests;
 			sourceTree = "<group>";
 		};
+		DB4641781F7AE45B006D4B20 /* CacheInteractors */ = {
+			isa = PBXGroup;
+			children = (
+				DB4641791F7AE468006D4B20 /* SaveAllInteractor.swift */,
+				DB46417A1F7AE468006D4B20 /* SaveAllInteractorImplementation.swift */,
+			);
+			path = CacheInteractors;
+			sourceTree = "<group>";
+		};
 		DB9A74281F7805E500EE392B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +201,12 @@
 		DB9A742B1F7807EC00EE392B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DB1B393D1F77FE5800FBD410 /* MadridViewController.swift */,
-				DB16EFD61F7860AC0039ACFE /* MadridViewController+UICollectionView.swift */,
+				DB1B393D1F77FE5800FBD410 /* ShopsViewController.swift */,
+				DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */,
+				DB4641761F7AD610006D4B20 /* DetailViewController.swift */,
+				DB46417F1F7AE8A6006D4B20 /* ActivitiesViewController.swift */,
+				DB4641811F7AEBAC006D4B20 /* ActivitiesViewController+UICollectionView.swift */,
+				DB2BA3E61F7DA7A900FF8701 /* MadridTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,9 +246,15 @@
 		DB9A74391F78215B00EE392B /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				DB4641781F7AE45B006D4B20 /* CacheInteractors */,
 				DB9A743A1F78217300EE392B /* DownloadAllInteractor.swift */,
 				DB9A743E1F78225000EE392B /* DownloadAllShopsInteractorImpl.swift */,
 				DB9A74401F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift */,
+				DB46417B1F7AE47F006D4B20 /* Mapper.swift */,
+				DB2BA3EB1F7DAC2D00FF8701 /* SetExecutedOnceInteractor.swift */,
+				DB2BA3EA1F7DAC2C00FF8701 /* SetExecutedOnceInteractorImpl.swift */,
+				DB2BA3F01F7DB13D00FF8701 /* CheckExecutedOnceInteractor.swift */,
+				DB2BA3F21F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -295,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1B39491F77FE5800FBD410 /* LaunchScreen.storyboard in Resources */,
+				DB4641861F7AEC4E006D4B20 /* ActivityCell.xib in Resources */,
 				DB16EFD51F7860170039ACFE /* MadridCollectionViewCell.xib in Resources */,
 				DB1B39461F77FE5800FBD410 /* Assets.xcassets in Resources */,
 				DB1B39411F77FE5800FBD410 /* Main.storyboard in Resources */,
@@ -315,21 +369,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB16EFD71F7860AC0039ACFE /* MadridViewController+UICollectionView.swift in Sources */,
-				DB1B393E1F77FE5800FBD410 /* MadridViewController.swift in Sources */,
+				DB4641821F7AEBAC006D4B20 /* ActivitiesViewController+UICollectionView.swift in Sources */,
+				DB46417E1F7AE517006D4B20 /* SaveAllInteractor.swift in Sources */,
+				DB16EFD71F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift in Sources */,
+				DB1B393E1F77FE5800FBD410 /* ShopsViewController.swift in Sources */,
+				DB4641801F7AE8A6006D4B20 /* ActivitiesViewController.swift in Sources */,
 				DB1B39441F77FE5800FBD410 /* MadridShopsAndActivities.xcdatamodeld in Sources */,
+				DB4641751F7ACF36006D4B20 /* HelperClass.swift in Sources */,
 				DB9A74361F781E8200EE392B /* JSONParser.swift in Sources */,
 				DB9A74311F78097700EE392B /* Activity.swift in Sources */,
 				DB9A74371F781F9600EE392B /* Shops.swift in Sources */,
 				DB9A743F1F78225100EE392B /* DownloadAllShopsInteractorImpl.swift in Sources */,
+				DB2BA3EF1F7DAC2D00FF8701 /* SetExecutedOnceInteractor.swift in Sources */,
+				DB4641731F7ACEF2006D4B20 /* CoreDataStack.swift in Sources */,
+				DB4641771F7AD610006D4B20 /* DetailViewController.swift in Sources */,
 				DB9A743D1F7821D600EE392B /* Constants.swift in Sources */,
+				DB2BA3E71F7DA7A900FF8701 /* MadridTabBarController.swift in Sources */,
 				DB16EFDA1F7AC6730039ACFE /* Reachability.swift in Sources */,
 				DB16EFD41F7860170039ACFE /* MadridCollectionViewCell.swift in Sources */,
+				DB46417C1F7AE47F006D4B20 /* Mapper.swift in Sources */,
+				DB2BA3EE1F7DAC2D00FF8701 /* SetExecutedOnceInteractorImpl.swift in Sources */,
 				DB9A74331F78098600EE392B /* Activities.swift in Sources */,
+				DB2BA3F11F7DB13D00FF8701 /* CheckExecutedOnceInteractor.swift in Sources */,
 				DB9A743B1F78217300EE392B /* DownloadAllInteractor.swift in Sources */,
 				DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */,
 				DB9A74411F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift in Sources */,
+				DB4641841F7AEC06006D4B20 /* ActivityCollectionViewCell.swift in Sources */,
 				DB9A74381F781FB500EE392B /* Shop.swift in Sources */,
+				DB46417D1F7AE514006D4B20 /* SaveAllInteractorImplementation.swift in Sources */,
+				DB2BA3F31F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

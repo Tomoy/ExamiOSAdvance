@@ -10,52 +10,18 @@
     </dependencies>
     <scenes>
         <!--Shops-->
-        <scene sceneID="Dbl-B6-nq7">
-            <objects>
-                <navigationController restorationIdentifier="Shops" id="lAZ-Wz-lz5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shops" id="svV-Gl-7lY"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aDs-Jn-QUk">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lE4-LH-Is0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gh0-do-d0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="566" y="-211"/>
-        </scene>
-        <!--Activities-->
-        <scene sceneID="YoE-8r-SPX">
-            <objects>
-                <navigationController restorationIdentifier="Activities" id="rdU-Dd-zU2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activities" id="4Gf-3D-qga"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FgO-fv-m8S">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yfu-vN-ljp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZkJ-jM-xVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="566" y="455"/>
-        </scene>
-        <!--Shops-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MadridViewController" customModule="MadridShopsAndActivities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShopsViewController" customModule="MadridShopsAndActivities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRN-Ub-qxL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="277"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="299"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Jp-kW-8bF">
-                                <rect key="frame" x="0.0" y="341" width="375" height="277"/>
+                                <rect key="frame" x="0.0" y="319" width="375" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qs4-Iw-oXe">
                                     <size key="itemSize" width="375" height="50"/>
@@ -88,12 +54,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360.8" y="142.57871064467767"/>
+            <point key="canvasLocation" x="614" y="-245"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Madrid Tab Bar Controller-->
         <scene sceneID="nPC-n7-e60">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B2p-cO-n1o" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B2p-cO-n1o" customClass="MadridTabBarController" customModule="MadridShopsAndActivities" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8HV-TQ-dWo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -101,16 +67,60 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lAZ-Wz-lz5" kind="relationship" relationship="viewControllers" id="GhA-li-3kY"/>
-                        <segue destination="rdU-Dd-zU2" kind="relationship" relationship="viewControllers" id="L46-a4-Z4m"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ai1-2e-zbs"/>
+                        <segue destination="hYd-d2-9Eb" kind="relationship" relationship="viewControllers" id="TXm-uS-1ee"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRS-Th-Fhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220" y="134"/>
         </scene>
+        <!--Activities-->
+        <scene sceneID="lP4-cs-xq8">
+            <objects>
+                <viewController id="hYd-d2-9Eb" customClass="ActivitiesViewController" customModule="MadridShopsAndActivities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VhC-gb-038">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmC-AZ-nwl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="299"/>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XOe-n7-Wkk">
+                                <rect key="frame" x="0.0" y="319" width="375" height="299"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e20-7J-M9i">
+                                    <size key="itemSize" width="375" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OmC-AZ-nwl" firstAttribute="leading" secondItem="WBe-06-nbT" secondAttribute="leading" id="2Pr-5r-DC9"/>
+                            <constraint firstItem="WBe-06-nbT" firstAttribute="trailing" secondItem="OmC-AZ-nwl" secondAttribute="trailing" id="Agz-NQ-NTg"/>
+                            <constraint firstItem="OmC-AZ-nwl" firstAttribute="top" secondItem="WBe-06-nbT" secondAttribute="top" id="Kjw-V2-DPz"/>
+                            <constraint firstItem="WBe-06-nbT" firstAttribute="bottom" secondItem="XOe-n7-Wkk" secondAttribute="bottom" id="Va2-L1-J5s"/>
+                            <constraint firstItem="XOe-n7-Wkk" firstAttribute="leading" secondItem="WBe-06-nbT" secondAttribute="leading" id="dIj-CK-Bh9"/>
+                            <constraint firstItem="WBe-06-nbT" firstAttribute="trailing" secondItem="XOe-n7-Wkk" secondAttribute="trailing" id="eRa-yt-mx5"/>
+                            <constraint firstItem="XOe-n7-Wkk" firstAttribute="top" secondItem="OmC-AZ-nwl" secondAttribute="bottom" id="eXJ-Wq-qEN"/>
+                            <constraint firstItem="XOe-n7-Wkk" firstAttribute="height" secondItem="OmC-AZ-nwl" secondAttribute="height" id="ieZ-iF-i3k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WBe-06-nbT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Activities" id="FjK-1v-uqn"/>
+                    <navigationItem key="navigationItem" id="whr-eR-nL7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="listCollectionView" destination="XOe-n7-Wkk" id="2gu-sf-cVk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gey-z1-ND5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="505"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="yfu-vN-ljp"/>
-    </inferredMetricsTieBreakers>
 </document>

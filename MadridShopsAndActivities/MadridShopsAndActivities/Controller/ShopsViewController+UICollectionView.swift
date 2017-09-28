@@ -8,22 +8,24 @@
 
 import UIKit
 
-extension MadridViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.model.count
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: MadridCollectionViewCell = listCollectionView.dequeueReusableCell(withReuseIdentifier: MadridCollectionViewCell.identifier, for: indexPath) as! MadridCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MadridCollectionViewCell.identifier, for: indexPath) as! MadridCollectionViewCell
+        
+        let shopCD:ShopCD = fetchedResultsController.object(at: indexPath)
+            cell.updateInFo(model: shopCD)
         
         return cell
     }
-    
-    
 }

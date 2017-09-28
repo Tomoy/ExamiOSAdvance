@@ -10,3 +10,8 @@ import Foundation
 
 let kShopsUrl = "https://madrid-shops.com/json_new/getShops.php"
 let kActivitiesUrl = "https://madrid-shops.com/json_new/getActivities.php"
+
+let kShopsSaved = "shopsSaved"
+let kActivitiesSaved = "activitiesSaved"
+
+let kSaved = "saved"
