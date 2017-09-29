@@ -14,8 +14,6 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate 
     @IBOutlet weak var listCollectionView: UICollectionView!
     
     var timer = Timer()
-    
-    var shops = Shops()
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
@@ -23,52 +21,42 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate 
         
         title = "Shops"
         
-        listCollectionView.register(UINib(nibName:"MadridCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: MadridCollectionViewCell.identifier)
+        listCollectionView.register(UINib(nibName:"ShopCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShopCollectionViewCell.identifier)
         listCollectionView.delegate = self
         listCollectionView.dataSource = self
         
         //Check if the data is already downloaded
-        if !CheckExecutedOnceInteractorImpl().check(key: kShopsSaved) {
+        if !CheckExecutedOnceInteractorImpl().check(key: kDataSaved) {
             
             //If not, Check every 10 seconds if there is connection until the user connects and then download the data
-            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.checkConnection), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.checkConnection), userInfo: nil, repeats: true)
             timer.fire()
-        } else {
-            //If there data is already downlaoded, no need to check for internet and just use the date from the database
         }
     }
     
     @objc func checkConnection() {
         //If there is no connection show alert, that connection is needed
         if Reachability.isConnectedToNetwork(){
+            print("Internet Connection Available!")
             //Stop timer because a connection was found
             timer.invalidate()
-            downloadDataFromInternet()
-            print("Internet Connection Available!")
+            //Download all data and set to downloaded
+            //Start loading spinner
+            HelperClass.downloadAndStoreLocallyAllData(context: context, callback: { (success:Bool, error:Error?) in
+                
+                if success {
+                    //Stop loading spinner
+                    self._fetchedResultsController = nil
+                    self.listCollectionView.reloadData()
+                } else {
+                    HelperClass.showOneOptionAlert(title: "Error!", message: "An error occurred downloading the data: \(error)", okButtonTitle: "OK", presenter: self)
+                }
+            })
+            
         }else{
             showNoInternetAlert()
+            //Disable buttons
             print("Internet Connection not Available!")
-        }
-    }
-    
-    func downloadDataFromInternet() {
-        //If there is connection, download data, save it in CoreData and set in userdefaults that is already saved
-        
-        let downloadAllShopsInteractor = DownloadAllShopsInteractorImpl()
-        
-        downloadAllShopsInteractor.execute { (shops:Shops) in
-            print("Shop: \(shops.get(index: 0).name)")
-            
-            let cacheInteractor = SaveAllShopsInteractorImplementation()
-            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops) in
-                //Once the objects are successfully saved, set in userdefaults so we dont load the data again
-                SetExecutedOnceInteractorImpl().set(key: kShopsSaved)
-                
-                self._fetchedResultsController = nil
-                self.listCollectionView.delegate = self
-                self.listCollectionView.dataSource = self
-                self.listCollectionView.reloadData()
-            })
         }
     }
     

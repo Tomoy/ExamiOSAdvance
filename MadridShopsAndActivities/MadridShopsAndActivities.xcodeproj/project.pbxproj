@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB16EFD41F7860170039ACFE /* MadridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD21F7860170039ACFE /* MadridCollectionViewCell.swift */; };
-		DB16EFD51F7860170039ACFE /* MadridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB16EFD31F7860170039ACFE /* MadridCollectionViewCell.xib */; };
+		DB16EFD41F7860170039ACFE /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD21F7860170039ACFE /* ShopCollectionViewCell.swift */; };
+		DB16EFD51F7860170039ACFE /* ShopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB16EFD31F7860170039ACFE /* ShopCollectionViewCell.xib */; };
 		DB16EFD71F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */; };
 		DB16EFDA1F7AC6730039ACFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD91F7AC6730039ACFE /* Reachability.swift */; };
 		DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */; };
@@ -56,8 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB16EFD21F7860170039ACFE /* MadridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridCollectionViewCell.swift; sourceTree = "<group>"; };
-		DB16EFD31F7860170039ACFE /* MadridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MadridCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB16EFD21F7860170039ACFE /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB16EFD31F7860170039ACFE /* ShopCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopsViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		DB16EFD91F7AC6730039ACFE /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB1B39381F77FE5800FBD410 /* MadridShopsAndActivities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShopsAndActivities.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,8 +120,8 @@
 		DB16EFD11F785FF20039ACFE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DB16EFD21F7860170039ACFE /* MadridCollectionViewCell.swift */,
-				DB16EFD31F7860170039ACFE /* MadridCollectionViewCell.xib */,
+				DB16EFD21F7860170039ACFE /* ShopCollectionViewCell.swift */,
+				DB16EFD31F7860170039ACFE /* ShopCollectionViewCell.xib */,
 				DB4641831F7AEC06006D4B20 /* ActivityCollectionViewCell.swift */,
 				DB4641851F7AEC4E006D4B20 /* ActivityCell.xib */,
 			);
@@ -349,7 +349,7 @@
 			files = (
 				DB1B39491F77FE5800FBD410 /* LaunchScreen.storyboard in Resources */,
 				DB4641861F7AEC4E006D4B20 /* ActivityCell.xib in Resources */,
-				DB16EFD51F7860170039ACFE /* MadridCollectionViewCell.xib in Resources */,
+				DB16EFD51F7860170039ACFE /* ShopCollectionViewCell.xib in Resources */,
 				DB1B39461F77FE5800FBD410 /* Assets.xcassets in Resources */,
 				DB1B39411F77FE5800FBD410 /* Main.storyboard in Resources */,
 			);
@@ -386,7 +386,7 @@
 				DB9A743D1F7821D600EE392B /* Constants.swift in Sources */,
 				DB2BA3E71F7DA7A900FF8701 /* MadridTabBarController.swift in Sources */,
 				DB16EFDA1F7AC6730039ACFE /* Reachability.swift in Sources */,
-				DB16EFD41F7860170039ACFE /* MadridCollectionViewCell.swift in Sources */,
+				DB16EFD41F7860170039ACFE /* ShopCollectionViewCell.swift in Sources */,
 				DB46417C1F7AE47F006D4B20 /* Mapper.swift in Sources */,
 				DB2BA3EE1F7DAC2D00FF8701 /* SetExecutedOnceInteractorImpl.swift in Sources */,
 				DB9A74331F78098600EE392B /* Activities.swift in Sources */,

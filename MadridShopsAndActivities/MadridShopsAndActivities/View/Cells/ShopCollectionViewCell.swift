@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MadridCollectionViewCell: UICollectionViewCell {
+class ShopCollectionViewCell: UICollectionViewCell {
 
-    static let identifier = "madridCell"
+    static let identifier = "shopCell"
         
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var logoImgView: UIImageView!

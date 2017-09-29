@@ -13,5 +13,6 @@ let kActivitiesUrl = "https://madrid-shops.com/json_new/getActivities.php"
 
 let kShopsSaved = "shopsSaved"
 let kActivitiesSaved = "activitiesSaved"
+let kDataSaved = "dataSaved"
 
 let kSaved = "saved"

@@ -14,8 +14,6 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
     @IBOutlet weak var listCollectionView: UICollectionView!
     
     var timer = Timer()
-    
-    var shops = Shops()
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
@@ -26,56 +24,6 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
         listCollectionView.register(UINib(nibName:"ActivityCell", bundle: nil), forCellWithReuseIdentifier: ActivityCollectionViewCell.identifier)
         listCollectionView.delegate = self
         listCollectionView.dataSource = self
-                
-        //Check if the data is already downloaded
-        if !CheckExecutedOnceInteractorImpl().check(key: kActivitiesSaved) {
-            
-            //If not, Check every 10 seconds if there is connection until the user connects and then download the data
-            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.checkConnection), userInfo: nil, repeats: true)
-            timer.fire()
-        } else {
-            //If there data is already downlaoded, no need to check for internet and just use the date from the database
-        }
-    }
-    
-    @objc func checkConnection() {
-        //If there is no connection show alert, that connection is needed
-        if Reachability.isConnectedToNetwork(){
-            //Stop timer because a connection was found
-            timer.invalidate()
-            downloadDataFromInternet()
-            print("Internet Connection Available!")
-        }else{
-            showNoInternetAlert()
-            print("Internet Connection not Available!")
-        }
-    }
-    
-    func downloadDataFromInternet() {
-        //If there is connection, download data, save it in CoreData and set in userdefaults that is already saved
-        
-        let downloadAllActivitiesInteractor = DownloadAllActivitiesInteractorImpl()
-        
-        downloadAllActivitiesInteractor.execute { (activities:Activities) in
-            
-            print("Activity: \(activities.get(index: 0).name)")
-            
-            let cacheInteractor = SaveAllActivitiesInteractorImplementation()
-            cacheInteractor.execute(activities: activities, context: self.context, onSuccess: { (activities) in
-                //Once the objects are successfully saved, set in userdefaults so we dont load the data again
-                SetExecutedOnceInteractorImpl().set(key: kActivitiesSaved)
-
-                self._fetchedResultsController = nil
-                self.listCollectionView.delegate = self
-                self.listCollectionView.dataSource = self
-                self.listCollectionView.reloadData()
-            })
-        }
-    }
-    
-    func showNoInternetAlert() {
-        
-        HelperClass.showOneOptionAlert(title: "No Internet!", message: "There is no connection to internet, please connect so we can get the info for you", okButtonTitle: "OK", presenter: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

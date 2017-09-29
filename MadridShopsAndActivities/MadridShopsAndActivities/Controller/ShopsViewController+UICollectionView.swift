@@ -21,7 +21,7 @@ extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MadridCollectionViewCell.identifier, for: indexPath) as! MadridCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopCollectionViewCell.identifier, for: indexPath) as! ShopCollectionViewCell
         
         let shopCD:ShopCD = fetchedResultsController.object(at: indexPath)
             cell.updateInFo(model: shopCD)
