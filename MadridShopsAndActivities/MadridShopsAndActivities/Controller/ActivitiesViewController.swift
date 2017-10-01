@@ -25,7 +25,7 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Activities"
+        title = "Actividades"
         
         //Center Map in Madrid
         let madridLocation = CLLocation(latitude: 40.4268, longitude: -3.7038)

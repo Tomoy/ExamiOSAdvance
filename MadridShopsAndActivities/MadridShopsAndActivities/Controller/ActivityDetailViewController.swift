@@ -22,7 +22,7 @@ class ActivityDetailViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Activity Detail"
+        title = "Detalle Actividad"
         
         //Center Map in ActivityLocation
         let activityLocation = CLLocation(latitude: CLLocationDegrees(Double(activityCD.latitude)), longitude: CLLocationDegrees(Double(activityCD.longitude)))

@@ -20,9 +20,9 @@ let kSaved = "saved"
 //Alert View constants
 let kGenericOkAlertButtonTitle = "OK"
 
-let kNoInternetAlertTitle = "No Internet!"
-let kNoConnectionAlertMessage = "There is no connection to internet, please connect so we can get the info for you"
+let kNoInternetAlertTitle = "Sin Internet!"
+let kNoConnectionAlertMessage = "No se encontró ninguna conexión a internet, por favor conectese asi podemos buscar la información necesaria de internet"
 
 let kErrorAlertTitle = "Error!"
 
-let kErrorDownloadingDataAlertMessage = "An error occurred downloading the data:"
+let kErrorDownloadingDataAlertMessage = "Ocurrió un error al descargar la data: "

@@ -212,11 +212,11 @@
             </objects>
             <point key="canvasLocation" x="2330" y="503"/>
         </scene>
-        <!--Activities-->
+        <!--Actividades-->
         <scene sceneID="jPf-4B-IKu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3sa-Jm-i0Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activities" image="activity_tabbar_item_icon" id="FjK-1v-uqn"/>
+                    <tabBarItem key="tabBarItem" title="Actividades" image="activity_tabbar_item_icon" id="FjK-1v-uqn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QtN-5I-nnv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -231,11 +231,11 @@
             </objects>
             <point key="canvasLocation" x="612.79999999999995" y="504.64767616191909"/>
         </scene>
-        <!--Shops-->
+        <!--Negocios-->
         <scene sceneID="G4W-aS-yLJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Xm-HG-84V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shops" image="shop_tabbar_item_icon" id="db9-zX-Vuy"/>
+                    <tabBarItem key="tabBarItem" title="Negocios" image="shop_tabbar_item_icon" id="db9-zX-Vuy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jE2-cN-HMf">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

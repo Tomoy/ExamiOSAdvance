@@ -28,7 +28,7 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Shops"
+        title = "Negocios"
         
         listCollectionView.register(UINib(nibName:"ShopCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShopCollectionViewCell.identifier)
         listCollectionView.delegate = self

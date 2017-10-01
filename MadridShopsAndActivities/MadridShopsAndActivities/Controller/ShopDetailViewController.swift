@@ -22,7 +22,7 @@ class ShopDetailViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Shop Detail"
+        title = "Detalle Negocio"
         
         //Center Map in shop location
         let shopLocation = CLLocation(latitude: CLLocationDegrees(Double(shopCD.latitude)), longitude: CLLocationDegrees(Double(shopCD.longitude)))
