@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ShopCollectionViewCell: UICollectionViewCell {
 
@@ -17,10 +18,16 @@ class ShopCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        logoImgView.makeCircular()
     }
     
     func updateInFo(model:ShopCD) {
         nameLabel.text = model.name
+        
+        if let logoUrl = model.logoUrl {
+            logoImgView.sd_setImage(with: URL(string: logoUrl), placeholderImage: UIImage(named: "default_shop"))
+        }
     }
 
 }

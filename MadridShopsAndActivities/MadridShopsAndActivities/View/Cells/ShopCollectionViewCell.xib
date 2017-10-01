@@ -23,20 +23,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ld-TK-hyL">
-                        <rect key="frame" x="5" y="5" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ld-TK-hyL">
+                        <rect key="frame" x="15" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="QSU-ay-Ff0"/>
+                            <constraint firstAttribute="width" constant="40" id="xgE-fI-Yof"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzy-D7-kxY">
-                        <rect key="frame" x="53" y="10" width="302" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzy-D7-kxY">
+                        <rect key="frame" x="75" y="10" width="280" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="jbf-z4-aXo"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qzy-D7-kxY" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="8R4-ns-J8k"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="qzy-D7-kxY" secondAttribute="trailing" constant="20" id="Znf-mz-CKE"/>
+                <constraint firstItem="1ld-TK-hyL" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="bNj-qI-qzw"/>
+                <constraint firstItem="qzy-D7-kxY" firstAttribute="leading" secondItem="1ld-TK-hyL" secondAttribute="trailing" constant="20" id="us9-ey-uf9"/>
+                <constraint firstItem="1ld-TK-hyL" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="15" id="zDh-Xr-rth"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="logoImgView" destination="1ld-TK-hyL" id="KzQ-hd-hww"/>

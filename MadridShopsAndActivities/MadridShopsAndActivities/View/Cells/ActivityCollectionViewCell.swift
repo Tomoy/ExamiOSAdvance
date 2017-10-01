@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActivityCollectionViewCell: UICollectionViewCell {
     
@@ -17,9 +18,15 @@ class ActivityCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        logoImgView.makeCircular()
     }
     
     func updateInFo(model:ActivityCD) {
         nameLabel.text = model.name
+        
+        if let logoUrl = model.logoUrl {
+            logoImgView.sd_setImage(with: URL(string: logoUrl), placeholderImage: UIImage(named: "default_activity"))
+        }
     }
 }

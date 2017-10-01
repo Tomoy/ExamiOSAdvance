@@ -23,20 +23,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLw-KT-NVh">
-                        <rect key="frame" x="5" y="5" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLw-KT-NVh">
+                        <rect key="frame" x="15" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="0An-JC-C3x"/>
+                            <constraint firstAttribute="width" constant="40" id="meA-CW-4ut"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oed-Gs-gJl">
-                        <rect key="frame" x="53" y="10" width="302" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oed-Gs-gJl">
+                        <rect key="frame" x="75" y="10" width="280" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="Bxp-m2-864"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="bLw-KT-NVh" firstAttribute="leading" secondItem="EGC-j9-UOn" secondAttribute="leading" constant="15" id="DTI-5C-LTk"/>
+                <constraint firstItem="Oed-Gs-gJl" firstAttribute="centerY" secondItem="EGC-j9-UOn" secondAttribute="centerY" id="DTW-Fg-3V9"/>
+                <constraint firstItem="bLw-KT-NVh" firstAttribute="centerY" secondItem="EGC-j9-UOn" secondAttribute="centerY" id="bQS-C1-895"/>
+                <constraint firstItem="EGC-j9-UOn" firstAttribute="trailing" secondItem="Oed-Gs-gJl" secondAttribute="trailing" constant="20" id="rmW-Es-HDm"/>
+                <constraint firstItem="Oed-Gs-gJl" firstAttribute="leading" secondItem="bLw-KT-NVh" secondAttribute="trailing" constant="20" id="sD5-jD-skA"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="EGC-j9-UOn"/>
             <connections>
                 <outlet property="logoImgView" destination="bLw-KT-NVh" id="Eae-3T-heC"/>

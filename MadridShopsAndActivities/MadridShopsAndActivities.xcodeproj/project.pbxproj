@@ -44,6 +44,7 @@
 		DB9A743F1F78225100EE392B /* DownloadAllShopsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A743E1F78225000EE392B /* DownloadAllShopsInteractorImpl.swift */; };
 		DB9A74411F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9A74401F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift */; };
 		DBBECB311F813472006AC8C2 /* ConnectionCheckerAndDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBECB301F813472006AC8C2 /* ConnectionCheckerAndDataDownloader.swift */; };
+		DBBECB361F814AF3006AC8C2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBECB351F814AF3006AC8C2 /* UIViewExtensions.swift */; };
 		DE9E208D501F5C6A7B31D6A7 /* Pods_MadridShopsAndActivities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D9D6E6DFCB2D1A6FF0136 /* Pods_MadridShopsAndActivities.framework */; };
 		FE3082EF05A32EE0DFB0B87E /* Pods_MadridShopsAndActivitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ADAB98DA7507DD4F59EE49 /* Pods_MadridShopsAndActivitiesTests.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		DB9A743E1F78225000EE392B /* DownloadAllShopsInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorImpl.swift; sourceTree = "<group>"; };
 		DB9A74401F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllActivitiesInteractorImpl.swift; sourceTree = "<group>"; };
 		DBBECB301F813472006AC8C2 /* ConnectionCheckerAndDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionCheckerAndDataDownloader.swift; sourceTree = "<group>"; };
+		DBBECB351F814AF3006AC8C2 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		EA0A9878753A81CBCE610221 /* Pods-MadridShopsAndActivitiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShopsAndActivitiesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShopsAndActivitiesTests/Pods-MadridShopsAndActivitiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F13D9D6E6DFCB2D1A6FF0136 /* Pods_MadridShopsAndActivities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridShopsAndActivities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				DB1B393B1F77FE5800FBD410 /* AppDelegate.swift */,
+				DBBECB341F814AD8006AC8C2 /* Extensions */,
 				DB16EFD81F7AC65F0039ACFE /* Helpers */,
 				DB9A742D1F7807FC00EE392B /* Model */,
 				DB9A742C1F7807F700EE392B /* View */,
@@ -284,6 +287,14 @@
 				DB2BA3F21F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		DBBECB341F814AD8006AC8C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBBECB351F814AF3006AC8C2 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,6 +532,7 @@
 				DB9A743B1F78217300EE392B /* DownloadAllInteractor.swift in Sources */,
 				DB1B393C1F77FE5800FBD410 /* AppDelegate.swift in Sources */,
 				DB9A74411F7822EE00EE392B /* DownloadAllActivitiesInteractorImpl.swift in Sources */,
+				DBBECB361F814AF3006AC8C2 /* UIViewExtensions.swift in Sources */,
 				DB4641841F7AEC06006D4B20 /* ActivityCollectionViewCell.swift in Sources */,
 				DB9A74381F781FB500EE392B /* Shop.swift in Sources */,
 				DB46417D1F7AE514006D4B20 /* SaveAllInteractorImplementation.swift in Sources */,
@@ -684,6 +696,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomas.MadridShopsAndActivities;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -700,6 +713,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomas.MadridShopsAndActivities;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

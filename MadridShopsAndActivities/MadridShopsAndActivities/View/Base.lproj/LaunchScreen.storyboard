@@ -1,10 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -13,13 +22,61 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shops &amp; Activities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp3-zp-SXz">
+                                <rect key="frame" x="88" y="329.5" width="199" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="ag1-Mv-nq7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVm-Vc-GmF">
+                                <rect key="frame" x="138" y="286" width="99" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uqN-Fz-YBV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_shop" translatesAutoresizingMaskIntoConstraints="NO" id="TKe-ac-reH">
+                                <rect key="frame" x="129" y="373.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="k8E-0u-PyK"/>
+                                    <constraint firstAttribute="height" constant="50" id="obv-b8-JtV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_activity" translatesAutoresizingMaskIntoConstraints="NO" id="mR0-Nx-XIE">
+                                <rect key="frame" x="195" y="373.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="WIL-V3-av8"/>
+                                    <constraint firstAttribute="height" constant="50" id="ckV-vC-fD4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zp3-zp-SXz" firstAttribute="top" secondItem="uVm-Vc-GmF" secondAttribute="bottom" constant="8.5" id="2Gg-fQ-3uU"/>
+                            <constraint firstItem="TKe-ac-reH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="NId-1w-wLJ"/>
+                            <constraint firstItem="mR0-Nx-XIE" firstAttribute="top" secondItem="TKe-ac-reH" secondAttribute="top" id="eDk-Dg-XMw"/>
+                            <constraint firstItem="mR0-Nx-XIE" firstAttribute="leading" secondItem="TKe-ac-reH" secondAttribute="trailing" constant="16" id="hzt-17-yzi"/>
+                            <constraint firstItem="Zp3-zp-SXz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="k9n-Oj-c1u"/>
+                            <constraint firstItem="uVm-Vc-GmF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lnb-eJ-qhk"/>
+                            <constraint firstItem="TKe-ac-reH" firstAttribute="top" secondItem="Zp3-zp-SXz" secondAttribute="bottom" constant="15" id="uIK-lF-9lh"/>
+                            <constraint firstItem="Zp3-zp-SXz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yPZ-Tn-jDp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default_activity" width="151" height="151"/>
+        <image name="default_shop" width="256" height="256"/>
+    </resources>
 </document>

@@ -22,7 +22,7 @@
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Jp-kW-8bF">
                                 <rect key="frame" x="0.0" y="319" width="375" height="299"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qs4-Iw-oXe">
                                     <size key="itemSize" width="375" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shops" id="db9-zX-Vuy"/>
+                    <tabBarItem key="tabBarItem" title="Shops" image="shop_tabbar_item_icon" id="db9-zX-Vuy"/>
                     <navigationItem key="navigationItem" id="P3W-gi-DKV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -88,7 +88,7 @@
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XOe-n7-Wkk">
                                 <rect key="frame" x="0.0" y="319" width="375" height="299"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e20-7J-M9i">
                                     <size key="itemSize" width="375" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -111,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WBe-06-nbT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Activities" id="FjK-1v-uqn"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="activity_tabbar_item_icon" id="FjK-1v-uqn"/>
                     <navigationItem key="navigationItem" id="whr-eR-nL7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -123,4 +123,8 @@
             <point key="canvasLocation" x="614" y="505"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="activity_tabbar_item_icon" width="30" height="30"/>
+        <image name="shop_tabbar_item_icon" width="30" height="30"/>
+    </resources>
 </document>
