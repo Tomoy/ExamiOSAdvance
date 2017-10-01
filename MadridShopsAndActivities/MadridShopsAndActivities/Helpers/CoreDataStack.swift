@@ -40,7 +40,7 @@ public class CoreDataStack {
                 let activeNavController = tabBarController.selectedViewController
                 
                 if activeNavController != nil {
-                    HelperClass.showOneOptionAlert(title: "Error", message: "\(nserror.userInfo)", okButtonTitle: "OK", presenter: activeNavController!)
+                    HelperClass.showOneOptionAlert(title: kErrorAlertTitle, message: "\(nserror.userInfo)", okButtonTitle: kGenericOkAlertButtonTitle, presenter: activeNavController!)
                 }
             }
         }

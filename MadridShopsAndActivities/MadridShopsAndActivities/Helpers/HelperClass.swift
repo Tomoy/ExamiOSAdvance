@@ -17,7 +17,6 @@ class HelperClass {
         
         let okAction = UIAlertAction(title: okButtonTitle, style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
-            print("Dismiss AlertView")
         }
         
         alertController.addAction(okAction)

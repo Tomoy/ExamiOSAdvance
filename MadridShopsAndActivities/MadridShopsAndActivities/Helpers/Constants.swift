@@ -16,3 +16,13 @@ let kActivitiesSaved = "activitiesSaved"
 let kDataSaved = "dataSaved"
 
 let kSaved = "saved"
+
+//Alert View constants
+let kGenericOkAlertButtonTitle = "OK"
+
+let kNoInternetAlertTitle = "No Internet!"
+let kNoConnectionAlertMessage = "There is no connection to internet, please connect so we can get the info for you"
+
+let kErrorAlertTitle = "Error!"
+
+let kErrorDownloadingDataAlertMessage = "An error occurred downloading the data:"

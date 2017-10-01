@@ -8,13 +8,15 @@
 
 import UIKit
 import CoreData
+import FillableLoaders
 
-class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate, DataDownloadedDelgate {
 
     @IBOutlet weak var listCollectionView: UICollectionView!
     
     var timer = Timer()
     var context: NSManagedObjectContext!
+    var myLoader: WavesLoader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,44 +27,33 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate 
         listCollectionView.delegate = self
         listCollectionView.dataSource = self
         
-        //Check if the data is already downloaded
+        //Check if the data is not already downloaded
         if !CheckExecutedOnceInteractorImpl().check(key: kDataSaved) {
             
-            //If not, Check every 10 seconds if there is connection until the user connects and then download the data
-            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.checkConnection), userInfo: nil, repeats: true)
-            timer.fire()
+            //If it is not, then ask the Singleton ConnectionCheckerAndDataDownloader to check connection and download the data if possible
+            //Disable TabBar Buttons while checking connection and downloading the data
+            enableDisableTabbarButtons(isEnabled: false)
+            ConnectionCheckerAndDataDownloader.sharedInstance.check(context: context, caller: self)
+            ConnectionCheckerAndDataDownloader.sharedInstance.delegate = self
         }
     }
     
-    @objc func checkConnection() {
-        //If there is no connection show alert, that connection is needed
-        if Reachability.isConnectedToNetwork(){
-            print("Internet Connection Available!")
-            //Stop timer because a connection was found
-            timer.invalidate()
-            //Download all data and set to downloaded
-            //Start loading spinner
-            HelperClass.downloadAndStoreLocallyAllData(context: context, callback: { (success:Bool, error:Error?) in
-                
-                if success {
-                    //Stop loading spinner
-                    self._fetchedResultsController = nil
-                    self.listCollectionView.reloadData()
-                } else {
-                    HelperClass.showOneOptionAlert(title: "Error!", message: "An error occurred downloading the data: \(error)", okButtonTitle: "OK", presenter: self)
-                }
-            })
-            
-        }else{
-            showNoInternetAlert()
-            //Disable buttons
-            print("Internet Connection not Available!")
-        }
-    }
-    
-    func showNoInternetAlert() {
+    func enableDisableTabbarButtons(isEnabled:Bool) {
         
-        HelperClass.showOneOptionAlert(title: "No Internet!", message: "There is no connection to internet, please connect so we can get the info for you", okButtonTitle: "OK", presenter: self)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabBarController = appDelegate.window!.rootViewController as! MadridTabBarController
+        
+        let tabBarItems = tabBarController.tabBar.items!
+        for i in 0...tabBarItems.count-1 {
+            tabBarItems[i].isEnabled = isEnabled
+        }
+    }
+    
+    //DataDownloadedDelegate method, tells when all the data is downloaded
+    func dataIsDownloaded() {
+        enableDisableTabbarButtons(isEnabled: true)
+        self._fetchedResultsController = nil
+        self.listCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
