@@ -23,10 +23,10 @@ class MadridTabBarController: UITabBarController, UITabBarControllerDelegate {
        
         if let ctx = self.context {
             
-            if let activityViewController = viewController as? ActivitiesViewController {
-                activityViewController.context = ctx
-            } else if let activityViewController = viewController as? ShopsViewController {
-                activityViewController.context = ctx
+            if let activityNavController = viewController as? UINavigationController,
+               let activityViewController = activityNavController.viewControllers.first as? ActivitiesViewController {
+                    activityViewController.context = ctx
+                
             }
         }
     }

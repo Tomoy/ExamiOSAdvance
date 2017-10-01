@@ -11,12 +11,16 @@ import MapKit
 
 class ActivityAnnotation: NSObject, MKAnnotation {
     var title: String?
-    var subtitle: String?
     var coordinate: CLLocationCoordinate2D
+    var logoUrl: String?
+    var activityCD: ActivityCD?
     
-    init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
-        self.coordinate = coordinate
-        self.title = title
-        self.subtitle = subtitle
+    init(activityCD:ActivityCD) {
+        
+        let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double(activityCD.latitude)), longitude: CLLocationDegrees(Double(activityCD.longitude)))
+        self.coordinate = location
+        self.title = activityCD.name
+        self.logoUrl = activityCD.logoUrl
+        self.activityCD = activityCD
     }
 }

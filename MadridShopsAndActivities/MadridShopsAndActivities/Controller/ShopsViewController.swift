@@ -11,6 +11,7 @@ import CoreData
 import FillableLoaders
 import CoreLocation
 import MapKit
+import SDWebImage
 
 class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate, DataDownloadedDelgate, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -22,6 +23,7 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
     var myLoader: WavesLoader?
     
     var locationManager = CLLocationManager()
+    let regionRadius: CLLocationDistance = 2500
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,8 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
         listCollectionView.dataSource = self
         
         //Center Map in Madrid
-        let madridLocation = CLLocation(latitude: 40.4168, longitude: -3.7038)
-        mapView.setCenter(madridLocation.coordinate, animated: true)
+        let madridLocation = CLLocation(latitude: 40.4268, longitude: -3.7038)
+        centerMapOnLocation(madridLocation)
         mapView.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
@@ -50,6 +52,12 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
             ConnectionCheckerAndDataDownloader.sharedInstance.check(context: context, caller: self)
             ConnectionCheckerAndDataDownloader.sharedInstance.delegate = self
         }
+    }
+    
+    func centerMapOnLocation(_ location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     func enableDisableTabbarButtons(isEnabled:Bool) {
@@ -72,16 +80,16 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let shop:ShopCD = fetchedResultsController.object(at: indexPath)
-        performSegue(withIdentifier: "ShowDetailSegue", sender: shop)
+        let shop = fetchedResultsController.object(at: indexPath)
+        performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowDetailSegue" {
-            let nextViewController = segue.destination as! DetailViewController
+        if segue.identifier == "ShowShopDetailSegue" {
+            let detailVC = segue.destination as! ShopDetailViewController
             let shopCD: ShopCD = sender as! ShopCD
-            //nextViewController.shop = mapShopCDToShop(shopCD: shopCD)
+            detailVC.shopCD = shopCD
         }
     }
     
@@ -126,10 +134,29 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
 
             let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "shopAnnotation")
             annotationView.image = UIImage(named:"shop_pin")
+            annotationView.canShowCallout = true
+            
+            let imageviewFrame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+            let imageView = UIImageView(frame: imageviewFrame)
+            imageView.clipsToBounds = true
+            let shopAnnotation = annotation as! ShopAnnotation
+            imageView.sd_setImage(with: URL(string: shopAnnotation.logoUrl!))
+            annotationView.leftCalloutAccessoryView = imageView
+            annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+
             return annotationView
         }
  
         return nil
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let shopAnnotation = view.annotation as! ShopAnnotation
+        
+        let shop = shopAnnotation.shopCD
+        performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
+        
+    }
+
 }
 

@@ -11,12 +11,16 @@ import MapKit
 
 class ShopAnnotation: NSObject, MKAnnotation {
     var title: String?
-    var subtitle: String?
     var coordinate: CLLocationCoordinate2D
+    var logoUrl: String?
+    var shopCD: ShopCD?
     
-    init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
-        self.coordinate = coordinate
-        self.title = title
-        self.subtitle = subtitle
+    init(shopCD:ShopCD) {
+        
+        let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double(shopCD.latitude)), longitude: CLLocationDegrees(Double(shopCD.longitude)))
+        self.coordinate = location
+        self.title = shopCD.name
+        self.logoUrl = shopCD.logoUrl
+        self.shopCD = shopCD
     }
 }

@@ -42,14 +42,6 @@ func mapShopCDToShop(shopCD:ShopCD) -> Shop {
     return shop
 }
 
-func mapShopCDToShopAnnotation(shopCD:ShopCD) -> ShopAnnotation {
-    
-    let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double(shopCD.latitude)), longitude: CLLocationDegrees(Double(shopCD.longitude)))
-    let shopAnnotation = ShopAnnotation(coordinate: location, title: shopCD.name!, subtitle: "")
-    return shopAnnotation
-}
-
-
 func mapActivityToActivityCD(activity:Activity, context:NSManagedObjectContext) -> ActivityCD {
     
     let activityCD = ActivityCD(context: context)
@@ -80,11 +72,4 @@ func mapActivityCDToActivity(activityCD:ActivityCD) -> Activity {
     activity.openingHours = activityCD.openingHours!
     
     return activity
-}
-
-func mapActivityCDToActivityAnnotation(activityCD:ActivityCD) -> ActivityAnnotation {
-    
-    let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double(activityCD.latitude)), longitude: CLLocationDegrees(Double(activityCD.longitude)))
-    let activityAnnotation = ActivityAnnotation(coordinate: location, title: activityCD.name!, subtitle: "")
-    return activityAnnotation
 }

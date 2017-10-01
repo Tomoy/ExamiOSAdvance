@@ -23,8 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = window!.rootViewController as! MadridTabBarController
         tabBarController.context = context!
         
-        if let rootViewController = tabBarController.viewControllers?.first as? ShopsViewController {
-            rootViewController.context = context
+        if let shopsNavController = tabBarController.viewControllers?.first as? UINavigationController {
+            if let shopsViewController = shopsNavController.viewControllers.first as? ShopsViewController {
+                shopsViewController.context = context
+            }
         }
         
 

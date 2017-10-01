@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1662AE1F8192BA0006CE9C /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1662AD1F8192BA0006CE9C /* ActivityDetailViewController.swift */; };
 		DB16EFD41F7860170039ACFE /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD21F7860170039ACFE /* ShopCollectionViewCell.swift */; };
 		DB16EFD51F7860170039ACFE /* ShopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB16EFD31F7860170039ACFE /* ShopCollectionViewCell.xib */; };
 		DB16EFD71F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */; };
@@ -25,7 +26,7 @@
 		DB2BA3F31F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BA3F21F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift */; };
 		DB4641731F7ACEF2006D4B20 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641721F7ACEF2006D4B20 /* CoreDataStack.swift */; };
 		DB4641751F7ACF36006D4B20 /* HelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641741F7ACF36006D4B20 /* HelperClass.swift */; };
-		DB4641771F7AD610006D4B20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641761F7AD610006D4B20 /* DetailViewController.swift */; };
+		DB4641771F7AD610006D4B20 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641761F7AD610006D4B20 /* ShopDetailViewController.swift */; };
 		DB46417C1F7AE47F006D4B20 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46417B1F7AE47F006D4B20 /* Mapper.swift */; };
 		DB46417D1F7AE514006D4B20 /* SaveAllInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46417A1F7AE468006D4B20 /* SaveAllInteractorImplementation.swift */; };
 		DB46417E1F7AE517006D4B20 /* SaveAllInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4641791F7AE468006D4B20 /* SaveAllInteractor.swift */; };
@@ -66,6 +67,7 @@
 		3DC7BD70BD700CFB73A0DC1D /* Pods-MadridShopsAndActivities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShopsAndActivities.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShopsAndActivities/Pods-MadridShopsAndActivities.release.xcconfig"; sourceTree = "<group>"; };
 		44ADAB98DA7507DD4F59EE49 /* Pods_MadridShopsAndActivitiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridShopsAndActivitiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F6FA531F621F60E9FB404F /* Pods-MadridShopsAndActivitiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShopsAndActivitiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShopsAndActivitiesTests/Pods-MadridShopsAndActivitiesTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB1662AD1F8192BA0006CE9C /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		DB16EFD21F7860170039ACFE /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB16EFD31F7860170039ACFE /* ShopCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopsViewController+UICollectionView.swift"; sourceTree = "<group>"; };
@@ -88,7 +90,7 @@
 		DB2BA3F21F7DB18100FF8701 /* CheckExecutedOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckExecutedOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		DB4641721F7ACEF2006D4B20 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		DB4641741F7ACF36006D4B20 /* HelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClass.swift; sourceTree = "<group>"; };
-		DB4641761F7AD610006D4B20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DB4641761F7AD610006D4B20 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		DB4641791F7AE468006D4B20 /* SaveAllInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllInteractor.swift; sourceTree = "<group>"; };
 		DB46417A1F7AE468006D4B20 /* SaveAllInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllInteractorImplementation.swift; sourceTree = "<group>"; };
 		DB46417B1F7AE47F006D4B20 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -237,9 +239,10 @@
 			children = (
 				DB1B393D1F77FE5800FBD410 /* ShopsViewController.swift */,
 				DB16EFD61F7860AC0039ACFE /* ShopsViewController+UICollectionView.swift */,
-				DB4641761F7AD610006D4B20 /* DetailViewController.swift */,
+				DB4641761F7AD610006D4B20 /* ShopDetailViewController.swift */,
 				DB46417F1F7AE8A6006D4B20 /* ActivitiesViewController.swift */,
 				DB4641811F7AEBAC006D4B20 /* ActivitiesViewController+UICollectionView.swift */,
+				DB1662AD1F8192BA0006CE9C /* ActivityDetailViewController.swift */,
 				DB2BA3E61F7DA7A900FF8701 /* MadridTabBarController.swift */,
 			);
 			path = Controller;
@@ -527,9 +530,10 @@
 				DB9A743F1F78225100EE392B /* DownloadAllShopsInteractorImpl.swift in Sources */,
 				DB2BA3EF1F7DAC2D00FF8701 /* SetExecutedOnceInteractor.swift in Sources */,
 				DB4641731F7ACEF2006D4B20 /* CoreDataStack.swift in Sources */,
-				DB4641771F7AD610006D4B20 /* DetailViewController.swift in Sources */,
+				DB4641771F7AD610006D4B20 /* ShopDetailViewController.swift in Sources */,
 				DB9A743D1F7821D600EE392B /* Constants.swift in Sources */,
 				DB2BA3E71F7DA7A900FF8701 /* MadridTabBarController.swift in Sources */,
+				DB1662AE1F8192BA0006CE9C /* ActivityDetailViewController.swift in Sources */,
 				DB16EFDA1F7AC6730039ACFE /* Reachability.swift in Sources */,
 				DB16EFD41F7860170039ACFE /* ShopCollectionViewCell.swift in Sources */,
 				DB46417C1F7AE47F006D4B20 /* Mapper.swift in Sources */,

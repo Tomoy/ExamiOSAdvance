@@ -20,6 +20,7 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
     var context: NSManagedObjectContext!
     
     var locationManager = CLLocationManager()
+    let regionRadius: CLLocationDistance = 2500
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,8 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
         title = "Activities"
         
         //Center Map in Madrid
-        let madridLocation = CLLocation(latitude: 40.4168, longitude: -3.7038)
-        mapView.setCenter(madridLocation.coordinate, animated: true)
+        let madridLocation = CLLocation(latitude: 40.4268, longitude: -3.7038)
+        centerMapOnLocation(madridLocation)
         mapView.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
@@ -40,18 +41,24 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
         listCollectionView.dataSource = self
     }
     
+    func centerMapOnLocation(_ location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let activity:ActivityCD = fetchedResultsController.object(at: indexPath)
-        performSegue(withIdentifier: "ShowDetailSegue", sender: activity)
+        performSegue(withIdentifier: "ShowActivityDetailSegue", sender: activity)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowDetailSegue" {
-            let nextViewController = segue.destination as! DetailViewController
+        if segue.identifier == "ShowActivityDetailSegue" {
+            let detailVC = segue.destination as! ActivityDetailViewController
             let activityCD: ActivityCD = sender as! ActivityCD
-            //nextViewController.shop = mapShopCDToShop(shopCD: shopCD)
+            detailVC.activityCD = activityCD
         }
     }
     
@@ -96,10 +103,28 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
             
             let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "activityAnnotation")
             annotationView.image = UIImage(named:"activity_pin")
+            annotationView.canShowCallout = true
+            
+            let imageviewFrame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+            let imageView = UIImageView(frame: imageviewFrame)
+            imageView.clipsToBounds = true
+            let activityAnnotation = annotation as! ActivityAnnotation
+            imageView.sd_setImage(with: URL(string: activityAnnotation.logoUrl!))
+            annotationView.leftCalloutAccessoryView = imageView
+            annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            
             return annotationView
         }
         
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let activityAnnotation = view.annotation as! ActivityAnnotation
+        
+        let activityCD = activityAnnotation.activityCD
+        performSegue(withIdentifier: "ShowActivityDetailSegue", sender: activityCD)
+        
     }
 }
 
