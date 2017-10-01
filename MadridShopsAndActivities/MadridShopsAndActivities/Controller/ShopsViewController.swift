@@ -9,14 +9,19 @@
 import UIKit
 import CoreData
 import FillableLoaders
+import CoreLocation
+import MapKit
 
-class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate, DataDownloadedDelgate {
+class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate, DataDownloadedDelgate, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var listCollectionView: UICollectionView!
-    
+    @IBOutlet weak var mapView: MKMapView!
+
     var timer = Timer()
     var context: NSManagedObjectContext!
     var myLoader: WavesLoader?
+    
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,15 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
         listCollectionView.register(UINib(nibName:"ShopCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShopCollectionViewCell.identifier)
         listCollectionView.delegate = self
         listCollectionView.dataSource = self
+        
+        //Center Map in Madrid
+        let madridLocation = CLLocation(latitude: 40.4168, longitude: -3.7038)
+        mapView.setCenter(madridLocation.coordinate, animated: true)
+        mapView.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
         
         //Check if the data is not already downloaded
         if !CheckExecutedOnceInteractorImpl().check(key: kDataSaved) {
@@ -102,6 +116,20 @@ class ShopsViewController: UIViewController, NSFetchedResultsControllerDelegate,
         }
         
         return _fetchedResultsController!
+    }
+    
+    // MARK: MapViewDelegate Methods
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if !(annotation is MKUserLocation) {
+
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "shopAnnotation")
+            annotationView.image = UIImage(named:"shop_pin")
+            return annotationView
+        }
+ 
+        return nil
     }
 }
 

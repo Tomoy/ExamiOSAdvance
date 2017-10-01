@@ -50,6 +50,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="listCollectionView" destination="9Jp-kW-8bF" id="iES-rs-XVG"/>
+                        <outlet property="mapView" destination="qRN-Ub-qxL" id="Kf3-aD-bH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,6 +117,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="listCollectionView" destination="XOe-n7-Wkk" id="2gu-sf-cVk"/>
+                        <outlet property="mapView" destination="OmC-AZ-nwl" id="qwr-4K-CMW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gey-z1-ND5" sceneMemberID="firstResponder"/>

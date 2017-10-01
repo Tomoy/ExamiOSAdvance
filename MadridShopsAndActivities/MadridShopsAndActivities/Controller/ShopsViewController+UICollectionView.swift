@@ -26,6 +26,9 @@ extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let shopCD:ShopCD = fetchedResultsController.object(at: indexPath)
             cell.updateInFo(model: shopCD)
         
+        let shopAnnotation = mapShopCDToShopAnnotation(shopCD: shopCD)
+        mapView.addAnnotation(shopAnnotation)
+        
         return cell
     }
 }

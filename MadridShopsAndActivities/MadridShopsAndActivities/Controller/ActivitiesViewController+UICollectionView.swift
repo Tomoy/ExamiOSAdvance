@@ -26,6 +26,9 @@ extension ActivitiesViewController: UICollectionViewDelegate, UICollectionViewDa
         let activityCD:ActivityCD = fetchedResultsController.object(at: indexPath)
         cell.updateInFo(model: activityCD)
         
+        let activityAnnotation = mapActivityCDToActivityAnnotation(activityCD: activityCD)
+        mapView.addAnnotation(activityAnnotation)
+        
         return cell
     }
 }

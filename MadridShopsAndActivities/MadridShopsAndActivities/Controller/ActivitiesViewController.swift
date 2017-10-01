@@ -8,18 +8,32 @@
 
 import UIKit
 import CoreData
+import CoreLocation
+import MapKit
 
-class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var listCollectionView: UICollectionView!
+    @IBOutlet weak var mapView: MKMapView!
     
     var timer = Timer()
     var context: NSManagedObjectContext!
+    
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Activities"
+        
+        //Center Map in Madrid
+        let madridLocation = CLLocation(latitude: 40.4168, longitude: -3.7038)
+        mapView.setCenter(madridLocation.coordinate, animated: true)
+        mapView.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
         
         listCollectionView.register(UINib(nibName:"ActivityCell", bundle: nil), forCellWithReuseIdentifier: ActivityCollectionViewCell.identifier)
         listCollectionView.delegate = self
@@ -72,6 +86,20 @@ class ActivitiesViewController: UIViewController, NSFetchedResultsControllerDele
         }
         
         return _fetchedResultsController!
+    }
+    
+    // MARK: MapViewDelegate Methods
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if !(annotation is MKUserLocation) {
+            
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "activityAnnotation")
+            annotationView.image = UIImage(named:"activity_pin")
+            return annotationView
+        }
+        
+        return nil
     }
 }
 
